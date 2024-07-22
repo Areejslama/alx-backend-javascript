@@ -5,6 +5,7 @@ export default function getNeighborhoodsList() {
     sanFranciscoNeighborhoods.push(addnewNeighborhood);
     return sanFranciscoNeighborhoods;
   };
+  const getNeighborhoodsList = () =>  sanFranciscoNeighborhoods;
     return {
     addNeighborhood
 };
