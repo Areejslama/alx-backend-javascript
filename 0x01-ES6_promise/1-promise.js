@@ -5,7 +5,7 @@ function getResponseFromAPI(success) {
       const body = 'success';
       resolve({ code, body });
     } else {
-      reject(new Error("The fake API is not working currently"));
+      reject(Error("The fake API is not working currently"));
     }
   });
 }
