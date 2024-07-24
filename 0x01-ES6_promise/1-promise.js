@@ -2,12 +2,11 @@ function getResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
     if (success === true) {
       const result = {
-	      status : 200,
-	      body: 'Success'
+        status: 200,
+        body: 'Success',
       };
       resolve(result);
-    }
-	  else {
+    } else {
       reject(Error('The fake API is not working currently'));
     }
   });
