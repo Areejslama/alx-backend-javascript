@@ -9,7 +9,7 @@ function handleResponseFromAPI(promise) {
       return result;
     })
     .catch(() => {
-      console.log('Error');
+      console.log('Got a response from the API');
       return {};
     });
 }
