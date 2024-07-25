@@ -1,7 +1,7 @@
 class Currency {
-  constructor(name, code) {
-    this._name = name;
+  constructor(code, name) {
     this._code = code;
+    this._name = name;
   }
 
   get code() {
@@ -21,7 +21,7 @@ class Currency {
   }
 
   displayFullCurrency() {
-    return `${this._code} (${this._name})`;
+    return `${this._name} (${this._code})`;
   }
 }
 
