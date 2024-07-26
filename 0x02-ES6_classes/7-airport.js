@@ -17,8 +17,15 @@ class Airport {
   }
 
   get [Symbol.toStringTag]() {
-    return this._code;
-  }
+        return this._code;
+    }
+
+    [Symbol.toPrimitive](hint) {
+        if (hint === 'string') {
+            return this.toString();
+        }
+        return null;
+    }
 }
 
 export default Airport;
