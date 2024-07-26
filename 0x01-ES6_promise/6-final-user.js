@@ -9,7 +9,7 @@ export function handleProfileSignup(firstName, lastName, fileName) {
   return Promise.allSettled(promises)
     .then((results) => results.map((results) => ({
       status: results.status,
-      value: results.value || results.reason,
+      value: results.value || results.error,
     })));
 }
 
