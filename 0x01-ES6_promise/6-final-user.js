@@ -8,8 +8,8 @@ export function handleProfileSignup(firstName, lastName, fileName) {
 
   return Promise.allSettled(promises)
     .then((results) => results.map((result) => ({
-      status: results.status,
-      value: results.value || results.error,
+      status: result.status,
+      value: result.value || result.error,
     })));
 }
 
