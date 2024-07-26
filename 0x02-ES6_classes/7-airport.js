@@ -12,20 +12,17 @@ class Airport {
     return this._code;
   }
 
-  toString() {
-    return `[${this._code}]`;
+  set name(value) {
+    this._name = value;
+  }
+
+  set code(value) {
+    this._code = value;
   }
 
   get [Symbol.toStringTag]() {
-        return this._code;
-    }
-
-    [Symbol.toPrimitive](hint) {
-        if (hint === 'string') {
-            return this.toString();
-        }
-        return null;
-    }
+    return this._code;
+  }
 }
 
 export default Airport;
