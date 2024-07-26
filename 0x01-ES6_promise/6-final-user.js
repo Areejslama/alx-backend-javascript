@@ -7,7 +7,7 @@ export function handleProfileSignup(firstName, lastName, fileName) {
   const promises = [user, file];
 
   return Promise.allSettled(promises)
-    .then((results) => results.map((results) => ({
+    .then((results) => results.map((result) => ({
       status: results.status,
       value: results.value || results.error,
     })));
