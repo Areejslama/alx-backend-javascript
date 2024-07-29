@@ -19,5 +19,5 @@ export default function getListStudents() {
     },
 
   ];
-  console.log(object);
+	return object;
 }
