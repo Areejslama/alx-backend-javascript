@@ -5,6 +5,6 @@ export default function createInt8TypedArray(length, position, value) {
   if (position >= value || position < 0) {
     throw Error('Position outside range');
   }
-
+  view1.setInt8(position, value);
   return view1;
 }
