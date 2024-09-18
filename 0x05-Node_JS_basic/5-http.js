@@ -13,6 +13,7 @@ const countStudents = (dataPath) => new Promise((resolve, reject) => {
       reject(new Error('Cannot load the database'));
     }
     if (data) {
+	values = [];
       const fileLines = data
         .toString('utf-8')
         .trim()
@@ -36,12 +37,15 @@ const countStudents = (dataPath) => new Promise((resolve, reject) => {
       const totalStudents = Object
         .values(studentGroups)
         .reduce((pre, cur) => (pre || []).length + cur.length);
-      console.log(`Number of students: ${totalStudents}`);
+      values.push(`Number of students: ${totalStudents}`);
       for (const [field, group] of Object.entries(studentGroups)) {
-        const studentNames = group.map((student) => student.firstname).join(', ');
-        console.log(`Number of students in ${field}: ${group.length}. List: ${studentNames}`);
-      }
-      resolve(data);
+          values.push([
+            `Number of students in ${field}: ${group.length}.`,
+            'List:',
+            group.map((student) => student.firstname).join(', '),
+          ].join(' '));
+        }
+	    resolve(values);
     }
   });
 });
