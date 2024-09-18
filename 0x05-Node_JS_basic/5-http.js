@@ -41,7 +41,7 @@ const countStudents = (dataPath) => new Promise((resolve, reject) => {
         const studentNames = group.map((student) => student.firstname).join(', ');
         console.log(`Number of students in ${field}: ${group.length}. List: ${studentNames}`);
       }
-      resolve(true);
+      resolve(data);
     }
   });
 });
