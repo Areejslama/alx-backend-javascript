@@ -44,15 +44,10 @@ describe('Cart API Integration Tests', function() {
 
     it('should return correct payment methods', function(done) {
         request.get(`${host}/available_payments`, (_err, res, body) => {
-            expect(res.statusCode).to.be.equal(200);
-            expect(JSON.parse(body))
-                .to.deep.equal({
-                    payment_methods: {
-                        credit_cards: true,
-                        paypal: false
-                    }
-	      done();
-                });
-        });
+      expect(res.statusCode).to.be.equal(200);
+      expect(JSON.parse(body))
+        .to.be.deep.equal({payment_methods: {credit_cards: true, paypal: false}});
+      done();
     });
+  });
 });
