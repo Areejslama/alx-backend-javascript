@@ -16,7 +16,7 @@ describe('sendPaymentRequestToAPI', function() {
     it('should log the total correctly', function() {
         sendPaymentRequestToApi(100, 20);
 
-        expect(spy.calledWith('The total is: 10')).to.be.true;
+        expect(spy.calledWith('The total is: 120')).to.be.true;
         expect(spy.calledOnce).to.be.true;
 	
 	 sendPaymentRequestToApi(10, 10);
