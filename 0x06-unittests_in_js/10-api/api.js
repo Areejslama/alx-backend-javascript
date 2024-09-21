@@ -29,7 +29,7 @@ app.post('/login', (req, res) => {
   if (req.body) {
     username = req.body.userName;
   }
-
+});
 
 app.listen(port, () => {
     console.log(`API available on localhost port ${port}`);
