@@ -51,8 +51,8 @@ describe('Cart API Integration Tests', function() {
                         credit_cards: true,
                         paypal: false
                     }
+	      done();
                 });
-            done();
         });
     });
 });
