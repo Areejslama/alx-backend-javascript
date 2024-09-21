@@ -37,7 +37,7 @@ describe('Cart API Integration Tests', function() {
     it('should return valid response for login', function(done) {
          request.post(`${host}/login`, {json: {userName: 'Pooh'}}, (_err, res, body) => {
          expect(res.statusCode).to.be.equal(200);
-         expect(body).to.be.equal('Welcome Pooh');
+         expect(body).to.be.equal('Welcome: Pooh');
          done();
     });
 });
