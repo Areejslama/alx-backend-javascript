@@ -35,12 +35,12 @@ describe('Cart API Integration Tests', function() {
     });
 
     it('should return valid response for login', function(done) {
-        request.post(`${host}/login`, {json: {userName: 'Pinkbrook'}}, (_err, res, body) => {
-            expect(res.statusCode).to.be.equal(200);
-            expect(body).to.be.equal('Welcome Pinkbrook');
-            done();
-        });
+         request.post(`${host}/login`, {json: {userName: 'Pooh'}}, (_err, res, body) => {
+         expect(res.statusCode).to.be.equal(200);
+         expect(body).to.be.equal('Welcome : Pooh');
+         done();
     });
+});
 
     it('should return correct payment methods', function(done) {
         request.get(`${host}/available_payments`, (_err, res, body) => {
